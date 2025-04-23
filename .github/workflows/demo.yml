@@ -9,10 +9,19 @@ jobs:
     steps:
     - name: print hello message
       run: echo "Hello world from Testing job"
-    
+    - name: list my repo
+      run: ls -la
+      
+    - name: Git clone my repo
+      uses: actions/checkout@v1
+
+    - name: print list my repo
+      run: ls -la
+      
   my_deploy:
     runs-on: ubuntu-latest
     needs: [my_testing]
+    
     steps:
     - name: print hellow message
       run: echo "Helloworld from Deploy job"
