@@ -31,4 +31,7 @@ jobs:
       run: echo "Helloworld from Deploy job"
     - name: print env my deploy
       run: echo "deploy name ${{ env.DEPLOY_NAME }}"
+
+    - name: print deploy number  
+      run: echo "deploy number ${{ env.MY_DEPLOY_NUMBER }}"
       
