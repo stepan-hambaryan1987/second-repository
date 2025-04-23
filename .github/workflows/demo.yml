@@ -1,4 +1,7 @@
 name: barev-bolorin
+env: DEPLOY_NAME: "myFlask"
+env: MY_DEPLOY_NUMBER-${{ github.sha }}
+
 on: 
   push:
     branches:
@@ -25,3 +28,6 @@ jobs:
     steps:
     - name: print hellow message
       run: echo "Helloworld from Deploy job"
+    - name: print env my deploy
+      run: echo "deploy name ${{ env.DEPLOY_NAME }}"
+      
