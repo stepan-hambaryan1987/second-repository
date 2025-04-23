@@ -1,6 +1,7 @@
 name: barev-bolorin
-env: DEPLOY_NAME: "myFlask"
-env: MY_DEPLOY_NUMBER-${{ github.sha }}
+env: 
+  DEPLOY_NAME: "myFlask"
+  MY_DEPLOY_NUMBER: "flask-deploy-ver-${{ github.sha }}"
 
 on: 
   push:
